@@ -1,18 +1,19 @@
 const express = require('express');
+const app = express();
 const cors = require('cors');
+app.use(cors());
 const axios = require('axios');
 require('dotenv').config();
-const app = express();
 const port = 8008;
 //INSTRUCTION:
 //npm run start:server
-//http://localhost:8008/msg1
+//http://localhost:8008/news
 
 app.get('/', (req, res) => {
   res.send('Holo, wurldz!');
 });
 
-app.get('/msg1', async (req, res) => {
+app.get('/news', async (req, res) => {
 
     const options = {
       method: 'GET',
