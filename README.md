@@ -6,7 +6,8 @@
 
 > npm install
 
-> npm run start
+> npm run start:dashboard
+> npm run start:server
 
 ## STEPS to create fullstack dashboard
 
