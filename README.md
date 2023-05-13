@@ -1,6 +1,6 @@
-# react_dasboard_server
+# react_dashboard_server
 
-## GOAL: ai minter 
+## GOAL: ai minter !
 
 ## STEPS to run dashboard
 
