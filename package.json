@@ -17,8 +17,9 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start:server": "nodemon nodeserver.js",
+    "start": "react-scripts start",
     "start:dashboard": "react-scripts start",
+    "start:server": "nodemon nodeserver.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
