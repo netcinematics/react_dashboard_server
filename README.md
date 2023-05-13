@@ -26,7 +26,7 @@ git clone https://github.com/netcinematics/react_dashboard_server.git
 
  - axios used by both React and Node.
 
--- deploy-setup
+-- DEPLOY-SETUP
 
 > npm install gh-pages --save-dev
 
@@ -34,6 +34,10 @@ git clone https://github.com/netcinematics/react_dashboard_server.git
 -   "homepage": "https://netcinematics.github.io/react_dashboard_server/",
 -   "predeploy": "npm run build",
 -   "deploy": "gh-pages -d build",
+> npm run deploy
+- github branch: gh-pages, folder: / (root)
+
+-- DEPLOY
 > npm run deploy
 
 ### backend
