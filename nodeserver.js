@@ -1,3 +1,5 @@
+//LOCALHOST version of SERVER.
+//DEPLOY to VERCEL by node_dashboard_server/index.js
 const express = require('express');
 const app = express();
 const cors = require('cors');
@@ -44,3 +46,6 @@ app.get('/news', async (req, res) => {
 app.listen(port, () => {
   console.log(`Server at http://localhost:${port}`);
 });
+
+// Export the Express API deploy
+module.exports = app

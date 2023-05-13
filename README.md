@@ -48,6 +48,7 @@ https://netcinematics.github.io/react_dashboard_server/
 > npm i express axios dotenv cors
 
 > npm i nodemon
+    "start:server": "nodemon nodeserver.js",
 
 > npm run start:dashboard
 > npm run start:server
