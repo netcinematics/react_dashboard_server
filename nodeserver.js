@@ -27,12 +27,12 @@ app.get('/news', async (req, res) => {
     try {
         const response = await axios.request(options);
         console.log(response.data);
-        res.setHeader('Content-Type', 'text/html');
+        res.setHeader('Content-Type', 'application/json');
         res.statusCode = 200;
         res.json(response.data);
     } catch (error) {
         console.error(error);
-        res.setHeader('Content-Type', 'text/html');
+        res.setHeader('Content-Type', 'application/json');
         res.statusCode = 404;
         res.json({data:'err1'});
     }

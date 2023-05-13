@@ -29,7 +29,7 @@ git clone https://github.com/netcinematics/react_dashboard_server.git
 -- DEPLOY-SETUP
 
 > npm install gh-pages --save-dev
-
+https://www.pluralsight.com/guides/deploying-github-pages-with-create-react-app
 - package.json homepage and name need to match.
 -   "homepage": "https://netcinematics.github.io/react_dashboard_server/",
 -   "predeploy": "npm run build",
@@ -37,8 +37,11 @@ git clone https://github.com/netcinematics/react_dashboard_server.git
 > npm run deploy
 - github branch: gh-pages, folder: / (root)
 
--- DEPLOY
+-- DEPLOY:
 > npm run deploy
+
+-- LIVE:
+https://netcinematics.github.io/react_dashboard_server/
 
 ### backend
 
@@ -48,6 +51,20 @@ git clone https://github.com/netcinematics/react_dashboard_server.git
 
 > npm run start:dashboard
 > npm run start:server
+
+vercel.json...
+https://jonathans199.medium.com/deploy-node-js-express-api-to-vercel-dbf4461795a5
+- login, connect vercel to github
+- vercel, new project connect to repo
+- setup: other ./ 
+- add E N V V A R S
+> DEPLOY btn
+
+> REMEMBER: dev / prod urls
+- dev:    http://localhost:8008
+- devapi: http://localhost:8008/news
+- prod: 
+
 
 
 ## REFERENCE
