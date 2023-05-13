@@ -17,7 +17,13 @@
 
 git clone https://github.com/netcinematics/react_dashboard_server.git
 
-### frontend
+## frontend
+
+> npm run start:dashboard
+    "start:dashboard": "react-scripts start",
+
+### frontend SETUP
+
 > https://rapidapi.com/collection/ai-based-apis
 
 > npx create-react-app react_dashboard_server  
@@ -26,7 +32,7 @@ git clone https://github.com/netcinematics/react_dashboard_server.git
 
  - axios used by both React and Node.
 
--- DEPLOY-SETUP
+### DEPLOY-SETUP
 
 > npm install gh-pages --save-dev
 https://www.pluralsight.com/guides/deploying-github-pages-with-create-react-app
@@ -43,15 +49,15 @@ https://www.pluralsight.com/guides/deploying-github-pages-with-create-react-app
 -- LIVE:
 https://netcinematics.github.io/react_dashboard_server/
 
-### backend
+## backend
 
 > npm i express axios dotenv cors
 
 > npm i nodemon
+> npm run start:server
     "start:server": "nodemon nodeserver.js",
 
-> npm run start:dashboard
-> npm run start:server
+### DEPLOY SETUP
 
 vercel.json...
 https://jonathans199.medium.com/deploy-node-js-express-api-to-vercel-dbf4461795a5
@@ -59,12 +65,12 @@ https://jonathans199.medium.com/deploy-node-js-express-api-to-vercel-dbf4461795a
 - vercel, new project connect to repo
 - setup: other ./ 
 - add E N V V A R S
-> DEPLOY btn
+> DEPLOY btn   (takes a while to update)
 
 > REMEMBER: dev / prod urls
 - dev:    http://localhost:8008
 - devapi: http://localhost:8008/news
-- prod: 
+- prod:   https://react-dashboard-server.vercel.app/
 
 
 

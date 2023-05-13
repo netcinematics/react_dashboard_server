@@ -8,7 +8,8 @@ const NewsFeed = () => {
 
         const options = {
             method: 'GET',
-            url: 'http://localhost:8008/news'
+            url: 'https://node-dashboard-server.vercel.app/news'
+            // url: 'http://localhost:8008/news'
         }
 
         axios.request(options).then((response) => {
@@ -26,7 +27,7 @@ const NewsFeed = () => {
 
     return (
         <div className="news-feed">
-            <h2>News Feed</h2>
+            <h2>News Feed!</h2>
             {first7Articles?.map((article, _index) => (
                 <div key={_index}>
                     <a href={article.url}><p>{article.title}</p></a>
