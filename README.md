@@ -9,6 +9,10 @@
 > npm run start:dashboard
 > npm run start:server
 
+> subscribe to service on rapidapi to test OpenAi (for example)
+
+> k-e-y in e-n-v
+
 ## STEPS to create fullstack dashboard
 
 git clone https://github.com/netcinematics/react_dashboard_server.git
@@ -22,7 +26,15 @@ git clone https://github.com/netcinematics/react_dashboard_server.git
 
  - axios used by both React and Node.
 
-> subscribe to service on rapidapi to test OpenAi (for example)
+-- deploy-setup
+
+> npm install gh-pages --save-dev
+
+- package.json homepage and name need to match.
+-   "homepage": "https://netcinematics.github.io/react_dashboard_server/",
+-   "predeploy": "npm run build",
+-   "deploy": "gh-pages -d build",
+> npm run deploy
 
 ### backend
 
