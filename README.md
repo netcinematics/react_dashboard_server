@@ -70,9 +70,14 @@ https://jonathans199.medium.com/deploy-node-js-express-api-to-vercel-dbf4461795a
 > REMEMBER: dev / prod urls
 - dev:    http://localhost:8008
 - devapi: http://localhost:8008/news
-- prod:   https://react-dashboard-server.vercel.app/
+- prod:   https://netcinematics.github.io/react_dashboard_server/
+- prodapi:https://node-dashboard-server.vercel.app/news
 
+> REMEMBER: npm run deploy
 
+# OpenAI API
+
+> $ npm install openai
 
 ## REFERENCE
 this code, is modified version of tutorial by Ania Kubow (star).
