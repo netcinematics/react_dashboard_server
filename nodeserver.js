@@ -18,37 +18,57 @@ app.get('/', (req, res) => {
   res.send('Holo, wurldz!');
 });
 
-app.get('/ai3', async (req, res) => {
-    res.send('Holo,3');
-});
-
 app.get('/ai1', async (req, res) => {
-    try {
-        const configuration = new Configuration({
+try {
+    const configuration = new Configuration({
         apiKey: process.env.OPENAI_API_KEY,
-        });
-        const openai = new OpenAIApi(configuration);
-        const response = await openai.createCompletion({
-        model: "text-davinci-003",
-        prompt: "Say this is a test",
-        temperature: 0,
-        max_tokens: 7,
-        });
-        console.log(response.data.choices[0].text)
-        res.setHeader('Content-Type', 'application/json');
-        res.statusCode = 200;
-        res.json(response.data.choices);        
-    } catch (error) {
-        console.error(error);
-        res.statusCode = 404;
-        res.setHeader('Content-Type', 'application/json');
-        res.json({data:'err1'});        
-    }    
-    
-
+    });
+    const openai = new OpenAIApi(configuration);
+    const response = await openai.createCompletion({
+    model: "text-davinci-003",
+    prompt: "Say this is a test",
+    temperature: 0,
+    max_tokens: 7,
+    });
+    console.log(response.data.choices[0].text)
+    res.setHeader('Content-Type', 'application/json');
+    res.statusCode = 200;
+    res.json(response.data.choices);        
+} catch (error) {
+    console.error(error);
+    res.statusCode = 404;
+    res.setHeader('Content-Type', 'application/json');
+    res.json({data:'err1'});        
+}    
 });
 
 app.get('/ai2', async (req, res) => {
+// platform.openai.com/docs/api-reference/chat/create
+// POST https://api.openai.com/v1/chat/completions
+try{
+    const options = {
+        "model": "gpt-3.5-turbo",
+        "messages": [{"role": "user", "content": "Are you alive?"}],
+        "temperature": 0.44, max_tokens:44
+    }
+    const {data} = await axios.post('https://api.openai.com/v1/chat/completions', options,
+    {
+        headers: {
+            'Authorization': `Bearer ${process.env.OPENAI_API_KEY}`,
+            'Content-Type':'application/json'
+        }
+    }
+    )
+    res.json(data.choices);
+} catch (error) {
+    console.error(error);
+    res.statusCode = 404;
+    res.setHeader('Content-Type', 'application/json');
+    res.json({data:'err22'});        
+} 
+});
+
+app.get('/ai3', async (req, res) => {
     const options = { //rapidapi broke
       method: 'GET',
       url: 'https://openai80.p.rapidapi.com/models',
@@ -58,7 +78,7 @@ app.get('/ai2', async (req, res) => {
     }};
     try {
         const response = await axios.request(options);
-        res.send('Holo, wurldz!');
+        res.send('rapidapi ai not working yet: gzip');
         // console.log(response.status);
         // res.setHeader('Content-Type', 'application/json');
         // res.statusCode = 200;
