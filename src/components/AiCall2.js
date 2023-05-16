@@ -4,6 +4,7 @@ import axios from 'axios'
 const AiCall2 = () => {
   const [responses, setResponses] = useState(null)
   const [prompt, setPrompt] = useState('how are you?')
+  // const [dataHistory, setDataHistory] = useState([])
   useEffect( () => {
     sendAiMSG();
   }, [])
