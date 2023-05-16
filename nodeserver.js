@@ -45,10 +45,11 @@ try {
 app.get('/ai2', async (req, res) => {
 // platform.openai.com/docs/api-reference/chat/create
 // POST https://api.openai.com/v1/chat/completions
+console.log("params", req.query.prompt)
 try{
     const options = {
         "model": "gpt-3.5-turbo",
-        "messages": [{"role": "user", "content": "Are you alive?"}],
+        "messages": [{"role": "user", "content": req.query.prompt}],
         "temperature": 0.44, max_tokens:44
     }
     const {data} = await axios.post('https://api.openai.com/v1/chat/completions', options,

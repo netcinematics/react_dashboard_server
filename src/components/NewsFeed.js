@@ -13,7 +13,6 @@ const NewsFeed = () => {
         }
 
         axios.request(options).then((response) => {
-            console.log(response.data)
             setArticles(response.data)
 
         }).catch((error) => {
@@ -21,8 +20,7 @@ const NewsFeed = () => {
         })
     }, [])
 
-    console.log(articles)
-
+    // console.log(articles)
     const first7Articles = articles?.slice(0,7)
 
     return (
