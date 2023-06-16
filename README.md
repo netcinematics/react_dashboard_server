@@ -80,6 +80,10 @@ https://jonathans199.medium.com/deploy-node-js-express-api-to-vercel-dbf4461795a
 > $ npm install openai
 
 ## REFERENCE
-this code, is modified version of tutorial by Ania Kubow (star).
+Ai modules, are modified versions of gr8 tutorials by Ania Kubow (star).
 https://www.youtube.com/watch?v=_itMdiSc0KI
 
+
+Crypto modules, inspired by (excellent) Alchemy Tutorials!
+https://docs.alchemy.com/docs/nft-minter
+https://docs.alchemy.com/docs/nft-minter-component
